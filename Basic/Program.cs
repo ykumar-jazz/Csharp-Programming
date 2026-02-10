@@ -17,6 +17,9 @@ using Basic.Application.Threading;
 using Basic.Domain.Model;
 
 Console.WriteLine("Hello, World!");
+#if false
+#region Delegates and Events and Anonymous Methods and Lambda Expressions and Func and Action and Predicate and Index and Range Operators and Constructor Chaining and Singleton Pattern and Anonymous Types and Tuples and Pattern Matching and Positional Records and Record Structs and Init-only Setters and Partial Methods and Local Functions and Nullable Reference Types and Discards and Exception Filters and Asynchronous Streams and Interpolated String Handlers and Target-typed new Expressions and Improved Overload Resolution with Generics
+Console.WriteLine("Delegates and Events and Anonymous Methods and Lambda Expressions and Func and Action and Predicate and Index and Range Operators和 Constructor Chaining和 Singleton Pattern和 Anonymous Types和 Tuples和 Pattern Matching和 Positional Records和 Record Structs和 Init-only Setters和 Partial Methods和 Local Functions和 Nullable Reference Types和 Discards和 Exception Filters和 Asynchronous Streams和 Interpolated String Handlers和 Target-typed new Expressions和 Improved Overload Resolution with Generics");
 /*
 Emp emp = new(1,"John Doe" );
 emp.Salary = 1000M;
@@ -329,6 +332,20 @@ List<string> subList = fruits[fruitRange]; // using range operator
 //Console.WriteLine("SubList: " + string.Join(", ", subList));
 
 
+
+static IEnumerator<int> AsEnumerator(List<int> list)
+{
+    for (int i = 0; i < list.Count; i++)
+    {
+        yield return list[i];
+    }
+}
+
+#endregion
+#endif
+
+#if false
+#region Threading and Thread Synchronization and Producer-Consumer Problem and CSV with threading
 /* Threading and async programming */
 Thread mainThread = Thread.CurrentThread;
 mainThread.Name = "Main Thread";
@@ -594,8 +611,7 @@ using(StreamReader reader = new(SharedData.FilePath))
 }
 
 Console.WriteLine("All chunks have been processed. from csv file");
-Console.WriteLine("Press Enter to exit...");
-Console.ReadLine();
+
 
 static void InvokeDataProcessing(List<string> chunk, string chunkName)
 {
@@ -654,13 +670,12 @@ static void InvokeDataProcessingWithMutex(List<string> chunk, string chunkName)
     }
 }
 
+#endregion
+#endif
 
-// static IEnumerator<int> AsEnumerator(List<int> list)
-// {
-//     for (int i = 0; i < list.Count; i++)
-//     {
-//         yield return list[i];
-//     }
-// }
+Console.WriteLine("Press Enter to exit...");
+Console.ReadLine();
+
+
 
   
